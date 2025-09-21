@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>contoh grid</title>
+    <style>
+       * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: arial, sans-serif;
+            }
+            h1 {text-align: center;
+                font-size: 36pt;
+            }
+            .container {
+                display:grid; /* mengaktifkan grid */
+                grid-template-columns: repeat(3, 1fr); /* membagi kolom menjadi 3 bagian sama lebar */
+                gap: 20px; /* jarak antar elemen di grid */
+                padding: 20px; /* jarak dalam kontainer */
+                
+            }
+            .box {
+                background-color: #4caf50; /* warna latar belakang elemen */
+                color: #fff; /* warna teks */
+                padding: 20px; /* jarak dalam elemen */
+                border-radius: 8px; /* membuat sudut elemen melengkung */
+                width: 100px; /* lebar elemen */
+                text-align: center; /* teks di tengah */
+            }
+            /* responsif: mengubah grid menjadi 1 kolom di layar kecil */
+            @media (max-width: 600px){
+                .container {
+                    grid-template-columns: 1fr; /* satu kolom pada layar kecil */
+                }
+            }
+    </style>
+  </head>
+  <body>
+    <h1>contoh grid</h1>
+    <div class="container">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+            <div class="box">Box 6</div>
+        </div>
+  </body>
+</html>

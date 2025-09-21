@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>contoh flexbox</title>
+    <style>
+      * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: arial, sans-serif;
+            }
+            h1 {text-align: center;
+                font-size: 36pt;
+            }
+            .container {
+                display:flex; /* mengaktifkan flexbox */
+                flex-direction: row; /*mengaktifkan susunan elemen menjadi horizontal (baris) */
+                justify-content: space-around; /*spasi antar elemen */
+                align-items: center; /*menyelaraskan elemen secara vertikal */
+                height: 100vh; /* tinggi kontainer sama dengan tinggi vewport */
+            }
+            .box {
+                background-color: #4caf50; /* warna latar belakang elemen */
+                color: #fff; /* warna teks */
+                padding: 20px; /* jarak dalam elemen */
+                border-radius: 8px; /* membuat sudut elemen melengkung */
+                width: 100px; /* lebar elemen */
+                text-align: center; /* teks di tengah */
+            }
+    </style>
+  </head>
+  <body>
+    <h1>contoh flexbox</h1>
+    <div class="container">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+  </body>
+</html>

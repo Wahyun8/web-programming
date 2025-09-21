@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <title>responsive layout</title>
+    <style>
+      * {
+            box-sizing: border-box;
+           }
+           body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+           }
+           header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+           }
+           nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+           }
+           nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+           }
+           nav a:hover {
+            text-decoration: underline;
+           }
+           main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin: 10px 0;
+           }
+           .content {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            margin-right: 10px;
+            border-radius: 8px;
+           }
+           .sidebar {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+           }
+           footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+           }
+           /*responsiv: mengubah layout menjadi 1 kolom di perangkat mobile */
+           @media (max-width: 768px){
+            main {
+                flex-direction: column;
+            }
+            .content, .sidebar {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+           }
+    </style>
+  </head>
+  <body>
+     <!-- header -->
+        <header>
+            <h1>Responsive Website</h1>
+            <p>This is a simple responsive layout</p>
+        </header>
+        <!-- Navigation Bar -->
+         <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            </nav>
+        <!-- main content and sidebar -->
+         <main>
+            <!-- main content area -->
+             <div class="content">
+                <h2>Main Content</h2>
+                <p>This is the main content area. On desktop screens, this section takes up more space compared to the sidebar. The alyout switches to a single column on smaller screens (like mobile devices) for better readibility and usability.</p>
+                <p>in this responsive layout we used flexbox to easily create 2-column layout that adapts to different screen sizes without much complexity.</p>
+             </div>
+             <!-- sidebar area -->
+              <div class="sidebar">
+                <h2>Sidebar</h2>
+                <p>This is sidebar content. On larger screens it takes up less space than the main content, but still sits beside it. On mobile screens, it moves below the main content to create a cleaner layout.</p>
+              </div>
+         </main>
+        <!-- Footer -->
+         <footer>
+            <p>&copy; 2024 Responsive Layout. All rights reserved.</p>
+         </footer>
+  </body>
+</html>
